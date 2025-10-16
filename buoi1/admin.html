@@ -1,0 +1,39 @@
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin</title>
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+    <div class="container-admin">
+        <h1>Nguoi dung quan tri trang</h1>
+        <button type="submit" id="logout">Dang xuat</button>
+        <h3>Them nguoi dung</h3>
+        <form id="form-admin">
+            <input type="text" id="name" placeholder="Nhap ten" required>
+            <input type="email" id="email" placeholder="Nhap email" required>
+            <input type="text" id="role" placeholder="Vai tro" required>
+            <button type="submit" id="button">Add</button>
+        </form>
+        <head>
+            <thead>
+                <tr>
+                    <th>Ho ten</th>
+                    <th>Email</th>
+                    <th>Vai Tro</th>
+                    <th>Hanh Dong</th>
+
+                </tr>
+            </thead>
+            <tbody id="usertable"></tbody>
+        </head>
+    </div>
+    <script src="./script.js"></script>
+</body>
+</html> 
+
+
+ 

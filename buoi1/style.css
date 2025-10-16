@@ -1,0 +1,26 @@
+ body {
+  font-family: Arial, sans-serif;
+  background: #f5f5f5;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+.container-login{
+    display: flex;
+    
+}
+form{
+    display: flex;
+    padding: 14px;
+    flex-direction: column;
+    background-color: rgb(219, 219, 186);
+    border-radius: 10px;
+    width: 500px;
+    height: 250px;
+
+}
+input, button{
+    margin: 15px;
+    padding: 8px;
+}
