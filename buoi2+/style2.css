@@ -1,0 +1,28 @@
+body {
+ 
+    text-align: center;
+    background-color: #f2e1e1;
+    
+}
+
+#logout {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: rgb(29, 171, 69);
+    color: aliceblue;
+    width: 100px;
+}
+
+#logout:hover {
+    background-color: rgb(232, 70, 70);
+    cursor: pointer;
+   
+}
+div{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    font-size:larger;
+}

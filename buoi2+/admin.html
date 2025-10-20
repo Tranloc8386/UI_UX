@@ -1,0 +1,41 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>admin</title>
+  <link rel="stylesheet" href="./style3.css">
+</head>
+<body>
+  <h1> QUẢN LÝ NGƯỜI DÙNG VÀ SẢN PHẨM</h1>
+  <button id="logout">Dang xuat</button>
+
+  <h3>Quan ly nguoi dung</h3>
+  <form id="userForm">
+    <input type="text" id="name" placeholder="Nhap ten" required>
+    <input type="email" id="email" placeholder="Nhap email" required>
+    <select id="role" >
+      <option value="">---Vai tro---</option>
+      <option value="admin">Admin</option>
+      <option value="user">User</option>
+    </select>
+    <button  type="submit">Add</button>
+  </form>
+  <ul id="userList"></ul>
+
+
+  <h3>Quan ly san pham</h3>
+  <form id="productForm">
+    <input type="text" id="pname" placeholder="Nhap ten san pham" required>
+    <input type="number" id="pprice" placeholder="Nhap gia" required>
+    <textarea id="pdesc" placeholder="Mo ta"></textarea>
+    <input type="text"  id="pimg" placeholder="link anh" required>
+    <button type="submit">Add</button>
+  </form>
+  <ul id="productList"></ul>
+  <script src="./admin.js"></script>
+</body>
+</html>

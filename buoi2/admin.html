@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Trang Quản Trị</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="navbar">
+    <h2>Quản trị viên</h2>
+    <button id="logoutBtn">Đăng xuất</button>
+  </div>
+
+  <div class="container">
+    <h3>👤 Quản lý người dùng</h3>
+    <form id="userForm">
+      <input type="text" id="name" placeholder="Họ tên" required>
+      <input type="email" id="userEmail" placeholder="Email" required>
+      <select id="role">
+        <option value="user">User</option>
+        <option value="admin">Admin</option>
+      </select>
+      <button type="submit">Thêm / Cập nhật</button>
+    </form>
+    <ul id="userList"></ul>
+
+    <h3>📦 Quản lý sản phẩm</h3>
+    <form id="productForm">
+      <input type="text" id="productName" placeholder="Tên sản phẩm" required>
+      <input type="number" id="productPrice" placeholder="Giá" required>
+      <input type="text" id="productDesc" placeholder="Mô tả">
+      <input type="text" id="productImg" placeholder="URL ảnh">
+      <button type="submit">Thêm / Cập nhật</button>
+    </form>
+    <ul id="productList"></ul>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
