@@ -1,41 +1,31 @@
-
-
-
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
+
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>admin</title>
-  <link rel="stylesheet" href="./style3.css">
+    <meta charset="UTF-8">
+    <title>Trang quản trị</title>
+    <link rel="stylesheet" href="./assets/css/styles.css">
 </head>
+
 <body>
-  <h1> QUẢN LÝ NGƯỜI DÙNG VÀ SẢN PHẨM</h1>
-  <button id="logout">Dang xuat</button>
+    <header>
+        <h2>Trang quản trị</h2>
+        <nav>
+            <button id="userTab">Quản lý người dùng</button>
+            <button id="productTab">Quản lý sản phẩm</button>
+            <button id="logoutBtn">Đăng xuất</button>
+        </nav>
+    </header>
 
-  <h3>Quan ly nguoi dung</h3>
-  <form id="userForm">
-    <input type="text" id="name" placeholder="Nhap ten" required>
-    <input type="email" id="email" placeholder="Nhap email" required>
-    <select id="role" >
-      <option value="">---Vai tro---</option>
-      <option value="admin">Admin</option>
-      <option value="user">User</option>
-    </select>
-    <button  type="submit">Add</button>
-  </form>
-  <ul id="userList"></ul>
+    <main>
+        <section id="userSection" class="tab"></section>
+        <section id="productSection" class="tab hidden"></section>
+    </main>
 
-
-  <h3>Quan ly san pham</h3>
-  <form id="productForm">
-    <input type="text" id="pname" placeholder="Nhap ten san pham" required>
-    <input type="number" id="pprice" placeholder="Nhap gia" required>
-    <textarea id="pdesc" placeholder="Mo ta"></textarea>
-    <input type="text"  id="pimg" placeholder="link anh" required>
-    <button type="submit">Add</button>
-  </form>
-  <ul id="productList"></ul>
-  <script src="./admin.js"></script>
+    <script src="./assets/js/common.js"></script>
+    <script src="./assets/js/users.js"></script>
+    <script src="./assets/js/products.js"></script>
+    <script src="./assets/js/admin.js"></script>
 </body>
+
 </html>

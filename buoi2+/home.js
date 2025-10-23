@@ -3,27 +3,80 @@ logout.addEventListener("click", () => {
   window.location.href = "login.html";
 });
 
+let products = JSON.parse(localStorage.getItem("products")) || [];
+let cart = JSON.parse(localStorage.getItem("cartList")) || [];
 
-const products = JSON.parse(localStorage.getItem("products")) || [];
-
+const productsEl = document.getElementById("products");
+const cartList = document.getElementById("cartList");
+const totalEl = document.getElementById("total");
+const checkoutBtn = document.getElementById("checkoutBtn");
 
 function renderProducts() {
-  const list = document.getElementById("productList");
-
+  productsEl.innerHTML = "";
   if (products.length === 0) {
-    list.innerHTML = "<p>Chưa có sản phẩm nào!</p>";
+    products.innerHTML = "<p>Chua co san pham nao</p>";
     return;
   }
 
-  list.innerHTML = products.map((p) => `
-    <div class="card" style="border:1px solid #ccc; padding:10px; margin:5px;">
-      <img src="${p.img}" alt="${p.name}" width="100">
-      <h4>${p.name}</h4>
-      <p>${p.desc}</p>
-      <p><b>Giá:</b> ${p.price}₫</p>
-    </div>
-  `).join("");
+  products.forEach((p) => {
+    const card = document.createElement("div");
+    card.className = "product-card";
+    card.innerHTML = `
+    <img src="${p.img}>
+    <h4>${p.name}</h4>
+    <p>${p.price}</p>
+    <p>${p.description}</p>
+    <button button onclick="addToCart('${p.id}')">Them vao gio hang</button>
+    
+    `;
+    productsEl.appendChild("card");
+  });
 }
 
-// Gọi hiển thị khi vào trang
+function renderCart() {
+  cartList.innerHTML = "";
+  let total = 0;
+  cart.forEach((item) => {
+    const li = document.createElement("li");
+    li.innerHTML = `
+    ${item.name}
+    ${item.price} VND
+    <button onclick="removeFromCart('${item.id}')">X</button>
+    `;
+    cartList.appendChild(li);
+    total += item.price;
+  });
+  totalEl.textContent = total;
+}
+
+window.addToCart = (id) => {
+  const item = products.find((p) => p.id === id);
+
+  if (!item) return;
+  if (cart.find((c) => c.id === id)) {
+    alert("San pham da co trong gio hang!");
+    return;
+  }
+  cart.push(item);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+};
+
+window.removeFromCart = (id) => {
+  cart = cart.filter((c) => c.id !== id);
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+};
+
+checkoutBtn.addEventListener("click", () => {
+  if (cart.length === 0) {
+    alert("Gio hang trong!");
+    return;
+  }
+  alert("Thanh toan thanh cong!");
+  cart = [];
+  localStorage.setItem("cart", JSON.stringify(cart));
+  renderCart();
+});
 renderProducts();
+renderCart();
