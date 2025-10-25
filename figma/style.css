@@ -1,0 +1,152 @@
+/* Reset mặc định */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Inter", sans-serif;
+}
+
+body {
+    background-color: #fff;
+    color: #111;
+    line-height: 1.6;
+    padding: 0 80px;
+}
+
+/* Header */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 0;
+    border-bottom: 1px solid #eee;
+}
+
+.logo img {
+    height: 40px;
+}
+
+.nav-links {
+    display: flex;
+    gap: 30px;
+    font-weight: 500;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #111;
+    cursor: pointer;
+}
+
+.search-bar {
+    flex: 1;
+    margin: 0 40px;
+    display: flex;
+    align-items: center;
+}
+
+.search-bar input {
+    width: 100%;
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    font-size: 14px;
+}
+
+
+.header-buttons {
+    display: flex;
+    gap: 12px;
+}
+
+button {
+    cursor: pointer;
+    border: none;
+    font-size: 14px;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+}
+
+.btn-outline {
+    border: 1px solid #111;
+    background: transparent;
+    color: #111;
+}
+
+.btn-outline:hover {
+    background: #111;
+    color: #fff;
+}
+
+.btn-black {
+    background: #111;
+    color: #fff;
+}
+
+.btn-black:hover {
+    opacity: 0.85;
+}
+
+
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.hero-text h1 {
+    font-size: 52px;
+    font-weight: 700;
+    margin-bottom: 16px;
+}
+
+.hero-text p {
+    font-size: 18px;
+    color: #555;
+    margin-bottom: 32px;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 16px;
+}
+
+.hero-image {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+}
+
+.hero-image img {
+    max-width: 450px;
+    border-radius: 12px;
+}
+
+.featured {
+    margin-top: 100px;
+}
+
+.featured-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.featured-header h2 {
+    font-size: 28px;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.featured-header p {
+    font-size: 15px;
+    color: #555;
+    max-width: 460px;
+}

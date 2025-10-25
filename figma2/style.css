@@ -1,0 +1,43 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+}
+
+body {
+    background-color: #f8fafc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+#container {
+    width: 50%;
+    height: 100vh
+}
+
+
+#img {
+    width: 50%;
+    height: 100vh
+}
+
+img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+#container1{
+    margin: 80px 30px;
+    width: 512px;
+    height: 120px;
+    gap: 48px;
+}
+
+#form-btn{
+    display: flex;
+    flex-direction: column;
+}
